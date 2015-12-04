@@ -183,7 +183,7 @@ public class ProdutoDAO {
 			
 			try {
 				ResultSet resultado = comando.executeQuery();
-				if (resultado.next()) {
+				while(resultado.next()) {
 					prod = new Produto();
 					prod.setCodigo(resultado.getInt(1));
 					prod.setDescricao(resultado.getString(2));
